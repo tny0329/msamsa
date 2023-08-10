@@ -1,0 +1,11 @@
+
+spring:
+  application:
+    name: firstSampleService
+  profiles:
+    active: dev
+
+
+
+myconfig:
+  name: jhpark222232323232
