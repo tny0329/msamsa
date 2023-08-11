@@ -1,10 +1,15 @@
 spring:
   application:
     name: firstSampleService
+  profiles:
+    active: dev
   config:
     activate:
       on-profile: dev
-
+    name: firstSampleService
+    profile: dev
+    import: optional:config-server:http://localhost:8888
+    use-legacy-processing: true
 
 myconfig:
   name: jhpark222232323232
