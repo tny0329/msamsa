@@ -5,7 +5,7 @@ spring:
     active: dev
     
 myconfig:
-  name: jhpark22223232323222ss
+  name: jhpark22223232323222ss2
 
 management:
   endpoints:
