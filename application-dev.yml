@@ -1,3 +1,6 @@
+myconfig:
+  name: jhpark222232323232555sdsd
+  
 spring:
   application:
     name: firstSampleService
@@ -11,5 +14,12 @@ spring:
     import: optional:config-server:http://localhost:8888
     use-legacy-processing: true
 
-myconfig:
-  name: jhpark222232323232555sdsd
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enable: true
+
