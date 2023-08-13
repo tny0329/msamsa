@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: firstSampleService
+          uri: lb://firstSampleService/
+          predicates:
+            - Path=/firstService/**
+            - Method=POST, GET
+#          #filters:
+#          #  - RewritePath=/firstService/(?<segment>.*), /$\{segment}
