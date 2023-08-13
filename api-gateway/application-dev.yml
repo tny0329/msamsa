@@ -1,8 +1,4 @@
 spring:
-  application:
-    name: api-gateway
-  profiles:
-    active: dev
   cloud:
     gateway:
       routes:
@@ -11,3 +7,5 @@ spring:
           predicates:
             - Path=/firstService/**
             - Method=POST, GET
+#          #filters:
+#          #  - RewritePath=/firstService/(?<segment>.*), /$\{segment}
