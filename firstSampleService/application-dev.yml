@@ -1,13 +1,2 @@
-spring:
-  application:
-    name: api-gateway
-  profiles:
-    active: dev
-  cloud:
-    gateway:
-      routes:
-        - id: firstSampleService
-          uri: lb://firstSampleService/
-          predicates:
-            - Path=/firstService/**
-            - Method=POST, GET
+myconfig:
+  name: jhpark22_firstSampleServic_application_dev2222222
