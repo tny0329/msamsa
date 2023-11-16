@@ -5,5 +5,5 @@ spring:
         - id: firstSampleService
           uri: lb://firstSampleService/
           predicates:
-            - Path=/firstService2/**
+            - Path=/firstService/**
             - Method=POST, GET
