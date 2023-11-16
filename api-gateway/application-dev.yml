@@ -5,7 +5,5 @@ spring:
         - id: firstSampleService
           uri: lb://firstSampleService/
           predicates:
-            - Path=/firstService/**
+            - Path=/firstService2/**
             - Method=POST, GET
-#          #filters:
-#          #  - RewritePath=/firstService/(?<segment>.*), /$\{segment}
