@@ -7,3 +7,7 @@ spring:
           predicates:
             - Path=/firstService/**
             - Method=POST, GET
+        - id: secondSampleService
+          uri: lb://secondSampleService/
+          predicates:
+            - Path=/name/**
