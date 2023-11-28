@@ -1,0 +1,74 @@
+spring:
+	cloud:
+		gateway:
+			routes:
+				- id:testSecondService
+				  uri:localhost:1112
+				  predicates:
+					- Path=/test/second/**
+					- Method=get
+				  filterts:
+					- RewritePath=/test/second/(?<path>.*),/$\{path}
+				- id:testFourth
+				  uri:lb://TESTFOURTH/
+				  predicates:
+					- Path=/test/fourth/service/**
+					- Method=get
+				  filterts:
+					- RewritePath=/test/fourth/service/(?<path>.*),/$\{path}
+				- id:testFifth
+				  uri:lb://TESTFIFTH/
+				  predicates:
+					- Path=/test/fifth/service/**
+					- Method=get
+				  filterts:
+					- RewritePath=/test/fifth/service/(?<path>.*),/$\{path}
+				- id:testEigth
+				  uri:localhost:1118
+				  predicates:
+					- Path=/test/eigth/**
+					- Method=post
+				  filterts:
+					- RewritePath=/test/eigth/(?<path>.*),/$\{path}
+				- id:testNinth
+				  uri:lb://TESTNINTH/
+				  predicates:
+					- Path=/test/ninth/**
+					- Method=post
+				  filterts:
+					- RewritePath=/test/ninth/(?<path>.*),/$\{path}
+				- id:testTenth
+				  uri:localhost:1110
+				  predicates:
+					- Path=/test/tenth/**
+					- Method=post
+				  filterts:
+					- RewritePath=/test/tenth/(?<path>.*),/$\{path}
+				- id:testEleventh
+				  uri:lb://TESTELEVENTH/
+				  predicates:
+					- Path=/test/eleventh/**
+					- Method=post
+				  filterts:
+					- RewritePath=/test/eleventh/(?<path>.*),/$\{path}
+				- id:testFourteenth
+				  uri:localhost:1124
+				  predicates:
+					- Path=/test/tourteenth/**
+					- Method=get
+				  filterts:
+					- RewritePath=/test/tourteenth/(?<path>.*),/$\{path}
+				- id:testFifteenth
+				  uri:localhost:1125
+				  predicates:
+					- Path=/test/fiftheenth/**
+					- Method=get
+				  filterts:
+					- RewritePath=/test/fiftheenth/(?<path>.*),/$\{path}
+				- id:testSixteenth
+				  uri:lb://TESTSIXTEENTH/
+				  predicates:
+					- Path=/test/sixteenth/service/**
+					- Method=post
+				  filterts:
+					- RewritePath=/test/sixteenth/service/(?<path>.*),/$\{path}
