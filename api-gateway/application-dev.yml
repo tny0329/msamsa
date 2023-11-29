@@ -5,10 +5,10 @@ spring:
       - id: testSecondService
         uri: localhost:1112
         predicates:
-         - Path=/test/second/check/**
+         - Path=/test/second/**
          - Method=get
         filters:
-         - RewritePath=/test/second/check/(?<path>.*),/$\{path}
+         - RewritePath=/test/second/(?<path>.*),/$\{path}
       - id: testFourth
         uri: lb://TESTFOURTH/
         predicates:
