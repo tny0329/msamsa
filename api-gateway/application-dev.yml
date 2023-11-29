@@ -72,3 +72,5 @@ spring:
 					- Method=post
 				  filterts:
 					- RewritePath=/test/sixteenth/(?<path>.*),/$\{path}
+myconfig:
+  value: aa
