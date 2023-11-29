@@ -41,7 +41,7 @@ spring:
         uri: localhost:1110
         predicates:
          - Path=/test/tenth/**
-         - Method=post
+         - Method=get
         filters:
          - RewritePath=/test/tenth/(?<path>.*),/$\{path}
       - id: testEleventh
