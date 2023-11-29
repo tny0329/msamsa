@@ -72,3 +72,6 @@ spring:
 					 - Method=get
 				  filterts:
 					 - RewritePath=/test/sixteenth/service/(?<path>.*),/$\{path}
+
+myconfig:
+  name: busrefresh
