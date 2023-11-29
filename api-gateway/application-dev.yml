@@ -2,29 +2,29 @@ spring:
   cloud:
     gateway:
       routes:
-        - id:testFourth
-          uri:lb://TESTFOURTH/
+        - id: testFourth
+          uri: lb://TESTFOURTH/
           predicates:
             - Path=/test/fourth/service/**
             - Method=get
           filterts:
             - RewritePath=/test/fourth/service/(?<path>.*),/$\{path}
-        - id:testFifth
-          uri:lb://TESTFIFTH/
+        - id: testFifth
+          uri: lb://TESTFIFTH/
           predicates:
             - Path=/test/fifth/service/**
             - Method=get
           filterts:
             - RewritePath=/test/fifth/service/(?<path>.*),/$\{path}
-        - id:testEigth
-          uri:localhost:1118
+        - id: testEigth
+          uri: localhost:1118
           predicates:
             - Path=/test/eigth/**
             - Method=get
           filterts:
             - RewritePath=/test/eigth/(?<path>.*),/$\{path}
-        - id:testNinth
-          uri:lb://TESTNINTH/
+        - id: testNinth
+          uri: lb://TESTNINTH/
           predicates:
             - Path=/test/ninth/service/**
             - Method=post
