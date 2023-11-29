@@ -23,10 +23,3 @@ spring:
             - Method=POST, GET
           filters:
             - RewritePath=/api/(?<path>.*),/$\{path}
-        - id: authService
-          uri: lb://AUTHSERVICE/
-          predicates:
-            - Path=/auth/**
-            - Method=POST, GET
-          filters:
-            - RewritePath=/auth/(?<path>.*),/$\{path}
